@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="Admiral.css" rel="stylesheet" type="text/css"/>
+    <script src="Admiral.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+      <h2>
+       PRESS THE BUTTON TO START      </h2>
+       <audio controls>
+        <source src="uataudio.mp3" type="audio/mpeg"/>
+       </audio>
+       <br>
+       
+
+  <//to start timer//>
+       <button onclick="Timer()">start timer</button>
+
+       <// div for countdown//>
+     <div id="Countdown"></div>
+     <div id="array"></div>
+     <div class="color">
+        <span id="hex">"e74c3c</span> 
+        <button onclick="changer()">Change color</button>
+     </div>
+     <script type="text/javascript">
+        function changer(){
+            var symbols,color;
+            symbols = "0123456789ABCDEF";
+
+             color = "#";
+             for(var i =0;i<6;i++){
+                color = color + symbols[Math.floor(Math.random()* 16)];
+             }
+             document.body.style.background = color;
+             document.getElementById("hex").innerHTML = color;
+        }
+        </script>
+
+        <h1>
+            Welcome to 5v5 sign up!
+        </h1>
+        <br>
+        <p id="newgamestatus">Sign up here</p>
+        <form id="gameinfo" onsubmit= "return false">
+            Player Name:     <input type="text" id="newplayer"/> <br>
+            Team #:            <input type="number" id="teams"/> <br>
+            <input type= "submit" onclick="checkcred();"/>
+            </form>
+
+     
+    </body>
+</html>
